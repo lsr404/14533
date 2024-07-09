@@ -1,0 +1,27 @@
+static_library("drug_demo") {
+  sources = [
+    "dao.c",
+    "src/yuanyi_aht20.c",
+    "src/yuanyi_mq2.c",
+    "src/yuanyi_servo.c",
+    # "src/yuanyi_sht20.c",
+    "src/wifi_connect.c",
+    "src/iot_profile.c",
+    "src/iot_hmac.c",
+    "src/iot_log.c",
+    "src/iot_main.c",
+  ]
+
+  include_dirs = [
+    "//commonlibrary/utils_lite/include",
+    "//kernel/liteos_m/kal/cmsis",
+    "//base/iothardware/peripheral/interfaces/inner_api",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/lwip_sack/include/lwip",
+    "//third_party/cJSON",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/mbedtls/include/mbedtls",
+    "//foundation/communication/wifi_lite/interfaces/wifiservice",
+    "include",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/paho.mqtt.c/include/mqtt",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/third_party/libcoap/include/coap2"
+  ]
+}
